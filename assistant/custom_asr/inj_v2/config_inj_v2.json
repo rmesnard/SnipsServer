@@ -1,0 +1,9 @@
+{
+    "visitor": {
+        "vanilla": "d25a6c3e-772a-4364-be1f-1be95274d892.vanilla", 
+        "ngram": true, 
+        "added": "d25a6c3e-772a-4364-be1f-1be95274d892.added", 
+        "pruningThresholds": [], 
+        "order": 3
+    }
+}

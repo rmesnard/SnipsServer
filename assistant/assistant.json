@@ -1,0 +1,89 @@
+{
+  "id" : "proj_724ak7OmPMK",
+  "name" : "doorbell-EN",
+  "intents" : [ {
+    "id" : "rmesnard:sayyes",
+    "type" : "registry",
+    "version" : "2.0.0",
+    "language" : "en",
+    "slots" : [ ],
+    "name" : "sayyes",
+    "enabledByDefault" : true
+  }, {
+    "id" : "rmesnard:servicename",
+    "type" : "registry",
+    "version" : "1.0.0",
+    "language" : "en",
+    "slots" : [ {
+      "name" : "service",
+      "id" : "slot_imported_FSiOAXno0",
+      "entityId" : "entity_2m8D69Xovkz",
+      "missingQuestion" : "",
+      "required" : false
+    } ],
+    "name" : "servicename",
+    "enabledByDefault" : true
+  }, {
+    "id" : "rmesnard:endconnection",
+    "type" : "registry",
+    "version" : "1.0.0",
+    "language" : "en",
+    "slots" : [ ],
+    "name" : "endconnection",
+    "enabledByDefault" : true
+  }, {
+    "id" : "rmesnard:reply",
+    "type" : "registry",
+    "version" : "1.0.0",
+    "language" : "en",
+    "slots" : [ ],
+    "name" : "reply",
+    "enabledByDefault" : true
+  }, {
+    "id" : "rmesnard:readmessage",
+    "type" : "registry",
+    "version" : "1.0.0",
+    "language" : "en",
+    "slots" : [ ],
+    "name" : "readmessage",
+    "enabledByDefault" : true
+  }, {
+    "id" : "rmesnard:sayno",
+    "type" : "registry",
+    "version" : "2.0.0",
+    "language" : "en",
+    "slots" : [ ],
+    "name" : "sayno",
+    "enabledByDefault" : true
+  }, {
+    "id" : "rmesnard:asktowait",
+    "type" : "registry",
+    "version" : "1.0.0",
+    "language" : "en",
+    "slots" : [ ],
+    "name" : "asktowait",
+    "enabledByDefault" : true
+  }, {
+    "id" : "rmesnard:getmessage",
+    "type" : "registry",
+    "version" : "2.0.0",
+    "language" : "en",
+    "slots" : [ ],
+    "name" : "getmessage",
+    "enabledByDefault" : true
+  } ],
+  "createdAt" : "2019-04-23T11:56:05.073Z",
+  "language" : "en",
+  "version" : {
+    "nluModel" : "0.19.0"
+  },
+  "platform" : {
+    "type" : "raspberrypi"
+  },
+  "asr" : {
+    "type" : "snips"
+  },
+  "analyticsEnabled" : true,
+  "heartbeatEnabled" : true,
+  "hotword" : "hey_snips"
+}

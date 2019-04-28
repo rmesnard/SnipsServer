@@ -1,0 +1,79 @@
+{
+  "config": {
+    "ignore_stop_words": true,
+    "max_pattern_length": 1000,
+    "max_queries": 500,
+    "unit_name": "deterministic_intent_parser"
+  },
+  "group_names_to_slot_names": {
+    "group0": "service"
+  },
+  "language_code": "en",
+  "patterns": {
+    "rmesnard:asktowait": [
+      "^\\s*one\\s*minute\\s*$",
+      "^\\s*wait\\s*$",
+      "^\\s*hold\\s*on\\s*$",
+      "^\\s*one\\s*moment\\s*$"
+    ],
+    "rmesnard:endconnection": [
+      "^\\s*close\\s*intercom\\s*$",
+      "^\\s*stop\\s*communication\\s*$",
+      "^\\s*end\\s*of\\s*dialog\\s*$",
+      "^\\s*close\\s*dialog\\s*$",
+      "^\\s*close\\s*connection\\s*$",
+      "^\\s*cut\\s*connection\\s*$",
+      "^\\s*end\\s*of\\s*communication\\s*$"
+    ],
+    "rmesnard:getmessage": [
+      "^\\s*get\\s*message\\s*$",
+      "^\\s*message\\s*$",
+      "^\\s*left\\s*message\\s*$"
+    ],
+    "rmesnard:readmessage": [
+      "^\\s*listen\\s*all\\s*message\\s*$",
+      "^\\s*is\\s*there\\s*message\\s*$",
+      "^\\s*there\\s*are\\s*messages\\s*$",
+      "^\\s*could\\s*read\\s*message\\s*$",
+      "^\\s*listen\\s*message\\s*$",
+      "^\\s*read\\s*message\\s*$"
+    ],
+    "rmesnard:reply": [
+      "^\\s*connection\\s*$",
+      "^\\s*connect\\s*$",
+      "^\\s*open\\s*connection\\s*$",
+      "^\\s*reply\\s*$"
+    ],
+    "rmesnard:sayno": [
+      "^\\s*not\\s*today\\s*$",
+      "^\\s*oh\\s*no\\s*$",
+      "^\\s*no\\s*thanks\\s*$",
+      "^\\s*cancel\\s*$",
+      "^\\s*negative\\s*$",
+      "^\\s*no\\s*$"
+    ],
+    "rmesnard:sayyes": [
+      "^\\s*yes\\s*thanks\\s*$",
+      "^\\s*affirmative\\s*$",
+      "^\\s*yep\\s*$",
+      "^\\s*yes\\s*$"
+    ],
+    "rmesnard:servicename": [
+      "^\\s*(?P<group0>%VISITOR%)\\s*here\\s*$",
+      "^\\s*(?P<group0>%VISITOR%)\\s*$",
+      "^\\s*is\\s*(?P<group0>%VISITOR%)\\s*service\\s*$"
+    ]
+  },
+  "slot_names_to_entities": {
+    "rmesnard:asktowait": {},
+    "rmesnard:endconnection": {},
+    "rmesnard:getmessage": {},
+    "rmesnard:readmessage": {},
+    "rmesnard:reply": {},
+    "rmesnard:sayno": {},
+    "rmesnard:sayyes": {},
+    "rmesnard:servicename": {
+      "service": "visitor"
+    }
+  }
+}

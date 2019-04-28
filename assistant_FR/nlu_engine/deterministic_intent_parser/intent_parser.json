@@ -1,0 +1,106 @@
+{
+  "config": {
+    "ignore_stop_words": true,
+    "max_pattern_length": 1000,
+    "max_queries": 500,
+    "unit_name": "deterministic_intent_parser"
+  },
+  "group_names_to_slot_names": {
+    "group0": "service"
+  },
+  "language_code": "fr",
+  "patterns": {
+    "rmesnard:asktowait": [
+      "^\\s*deux\\s*secondes\\s*$",
+      "^\\s*attends\\s*instant\\s*$",
+      "^\\s*seconde\\s*$",
+      "^\\s*minute\\s*$",
+      "^\\s*attendez\\s*$",
+      "^\\s*attends\\s*$",
+      "^\\s*instant\\s*$",
+      "^\\s*instant\\s*il\\s*plait\\s*$",
+      "^\\s*met\\s*en\\s*attente\\s*$",
+      "^\\s*fait\\s*attendre\\s*$",
+      "^\\s*veuillez\\s*attendre\\s*$"
+    ],
+    "rmesnard:endconnection": [
+      "^\\s*arret\\s*dialogue\\s*$",
+      "^\\s*fin\\s*dicution\\s*$",
+      "^\\s*fin\\s*communication\\s*$",
+      "^\\s*arret\\s*communication\\s*$",
+      "^\\s*arret\\s*connection\\s*$",
+      "^\\s*arret\\s*interphone\\s*$",
+      "^\\s*coupe\\s*interphone\\s*$",
+      "^\\s*fin\\s*discution\\s*$",
+      "^\\s*termine\\s*communication\\s*$",
+      "^\\s*stop\\s*communication\\s*$",
+      "^\\s*stop\\s*connection\\s*$",
+      "^\\s*coupe\\s*connection\\s*$",
+      "^\\s*fin\\s*connection\\s*$"
+    ],
+    "rmesnard:getmessage": [
+      "^\\s*laisse\\s*message\\s*$",
+      "^\\s*message\\s*$",
+      "^\\s*transmettre\\s*message\\s*$",
+      "^\\s*noter\\s*message\\s*$",
+      "^\\s*prendre\\s*message\\s*$",
+      "^\\s*je\\s*vais\\s*laisser\\s*message\\s*$",
+      "^\\s*laisser\\s*message\\s*$"
+    ],
+    "rmesnard:readmessage": [
+      "^\\s*combien\\s*t\\s*il\\s*messages\\s*$",
+      "^\\s*\u00e9coute\\s*messagerie\\s*$",
+      "^\\s*\u00e9couter\\s*messagerie\\s*$",
+      "^\\s*\u00e9couter\\s*message\\s*$",
+      "^\\s*lit\\s*messages\\s*$",
+      "^\\s*est\\s*que\\s*ai\\s*messages\\s*$",
+      "^\\s*ai\\s*messages\\s*$",
+      "^\\s*combien\\s*message\\s*t\\s*il\\s*$",
+      "^\\s*quelqu\\s*laiss\u00e9\\s*messages\\s*$",
+      "^\\s*combien\\s*message\\s*il\\s*t\\s*il\\s*$",
+      "^\\s*combien\\s*messages\\s*$",
+      "^\\s*combien\\s*message\\s*il\\s*$",
+      "^\\s*t\\s*il\\s*messages\\s*$",
+      "^\\s*lire\\s*messages\\s*$"
+    ],
+    "rmesnard:reply": [
+      "^\\s*r\u00e9ponse\\s*$",
+      "^\\s*r\u00e9pond\\s*$",
+      "^\\s*ouvre\\s*connection\\s*$",
+      "^\\s*connection\\s*$",
+      "^\\s*connecte\\s*$",
+      "^\\s*connecter\\s*$",
+      "^\\s*r\u00e9pondre\\s*$"
+    ],
+    "rmesnard:sayno": [
+      "^\\s*pas\\s*besoin\\s*$",
+      "^\\s*non\\s*pas\\s*peine\\s*$",
+      "^\\s*non\\s*$",
+      "^\\s*annuler\\s*$",
+      "^\\s*n\u00e9gatif\\s*$"
+    ],
+    "rmesnard:sayyes": [
+      "^\\s*oui\\s*il\\s*plait\\s*$",
+      "^\\s*oui\\s*$",
+      "^\\s*affirmatif\\s*$",
+      "^\\s*yep\\s*$"
+    ],
+    "rmesnard:servicename": [
+      "^\\s*est\\s*livreur\\s*(?P<group0>%VISITOR%)\\s*$",
+      "^\\s*est\\s*(?P<group0>%VISITOR%)\\s*$",
+      "^\\s*(?P<group0>%VISITOR%)\\s*$"
+    ]
+  },
+  "slot_names_to_entities": {
+    "rmesnard:asktowait": {},
+    "rmesnard:endconnection": {},
+    "rmesnard:getmessage": {},
+    "rmesnard:readmessage": {},
+    "rmesnard:reply": {},
+    "rmesnard:sayno": {},
+    "rmesnard:sayyes": {},
+    "rmesnard:servicename": {
+      "service": "visitor"
+    }
+  }
+}

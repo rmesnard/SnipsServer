@@ -1,0 +1,267 @@
+{
+    "entityNameToFilename": {
+        "visitor": "e_0.snips"
+    }, 
+    "intentNameToDisambigs": {
+        "rmesnard:servicename": {
+            "start": "`INTENT`5a8ccf5b-3a81-4e82-bed7-e979cfb05c3e`START", 
+            "end": "`INTENT`5a8ccf5b-3a81-4e82-bed7-e979cfb05c3e`END"
+        }, 
+        "rmesnard:asktowait": {
+            "start": "`INTENT`e7598ee7-e1d7-43ef-8f0c-1751b9d03e0b`START", 
+            "end": "`INTENT`e7598ee7-e1d7-43ef-8f0c-1751b9d03e0b`END"
+        }, 
+        "rmesnard:reply": {
+            "start": "`INTENT`1aca9b20-8437-48e3-81ce-740f6bc3fe82`START", 
+            "end": "`INTENT`1aca9b20-8437-48e3-81ce-740f6bc3fe82`END"
+        }, 
+        "rmesnard:readmessage": {
+            "start": "`INTENT`96996935-1cc1-4d12-94b4-886a11aa18cf`START", 
+            "end": "`INTENT`96996935-1cc1-4d12-94b4-886a11aa18cf`END"
+        }, 
+        "rmesnard:sayno": {
+            "start": "`INTENT`9a9ba876-c5db-4e4b-814a-a8f08e552f2a`START", 
+            "end": "`INTENT`9a9ba876-c5db-4e4b-814a-a8f08e552f2a`END"
+        }, 
+        "rmesnard:sayyes": {
+            "start": "`INTENT`1239b6d8-f21f-4b99-9ae2-b869071757b9`START", 
+            "end": "`INTENT`1239b6d8-f21f-4b99-9ae2-b869071757b9`END"
+        }, 
+        "rmesnard:getmessage": {
+            "start": "`INTENT`57f8ee51-1e23-4e67-9883-4d96b20f536b`START", 
+            "end": "`INTENT`57f8ee51-1e23-4e67-9883-4d96b20f536b`END"
+        }, 
+        "3f4ba493-8249-4fc9-8a45-e17b35d544db": {
+            "start": "`INTENT`3f4ba493-8249-4fc9-8a45-e17b35d544db`START", 
+            "end": "`INTENT`3f4ba493-8249-4fc9-8a45-e17b35d544db`END"
+        }, 
+        "rmesnard:endconnection": {
+            "start": "`INTENT`44358217-f4a3-41b2-93ea-972c711b77f9`START", 
+            "end": "`INTENT`44358217-f4a3-41b2-93ea-972c711b77f9`END"
+        }
+    }, 
+    "injectionsEngine": {
+        "version": 2
+    }, 
+    "language": "en", 
+    "decoderConfig": {
+        "useFinalProbs": true, 
+        "latticeBeamSize": 4.0, 
+        "mbrConfig": {
+            "confidenceAdditionnalExponent": 1.0, 
+            "unkProba": 0.5, 
+            "unkThreshold": 0.3
+        }, 
+        "maxActive": 2500, 
+        "minActive": 200, 
+        "acousticScale": 0.83, 
+        "beamSize": 12.0
+    }, 
+    "cacheSizeDynamic": 536870912, 
+    "asrModel": {
+        "version": "0.1.0"
+    }, 
+    "asrLmAdaptation": {
+        "version": "0.19.7"
+    }, 
+    "endpointingRules": {
+        "rule3": {
+            "maxRelativeCost": 8.0, 
+            "minTrailingSilence": 1.0, 
+            "minUtteranceLength": 0.0, 
+            "mustContainNonsilence": true
+        }, 
+        "rule2": {
+            "maxRelativeCost": 5.5, 
+            "minTrailingSilence": 0.7, 
+            "minUtteranceLength": 0.0, 
+            "mustContainNonsilence": true
+        }, 
+        "rule1": {
+            "maxRelativeCost": 10000000000.0, 
+            "minTrailingSilence": 4.0, 
+            "minUtteranceLength": 0.0, 
+            "mustContainNonsilence": false
+        }, 
+        "rule5": {
+            "maxRelativeCost": 10000000000.0, 
+            "minTrailingSilence": 0.0, 
+            "minUtteranceLength": 10.0, 
+            "mustContainNonsilence": false
+        }, 
+        "rule4": {
+            "maxRelativeCost": 2.5, 
+            "minTrailingSilence": 0.5, 
+            "minUtteranceLength": 0.0, 
+            "mustContainNonsilence": true
+        }
+    }, 
+    "postprocessors": [
+        {
+            "Regex": {
+                "pattern": "`INTENT`5a8ccf5b-3a81-4e82-bed7-e979cfb05c3e`START (.*?) `INTENT`5a8ccf5b-3a81-4e82-bed7-e979cfb05c3e`END", 
+                "flags": "i", 
+                "replacement": "$1"
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`5a8ccf5b-3a81-4e82-bed7-e979cfb05c3e`START ", 
+                "flags": "i", 
+                "replacement": ""
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`e7598ee7-e1d7-43ef-8f0c-1751b9d03e0b`START (.*?) `INTENT`e7598ee7-e1d7-43ef-8f0c-1751b9d03e0b`END", 
+                "flags": "i", 
+                "replacement": "$1"
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`e7598ee7-e1d7-43ef-8f0c-1751b9d03e0b`START ", 
+                "flags": "i", 
+                "replacement": ""
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`1aca9b20-8437-48e3-81ce-740f6bc3fe82`START (.*?) `INTENT`1aca9b20-8437-48e3-81ce-740f6bc3fe82`END", 
+                "flags": "i", 
+                "replacement": "$1"
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`1aca9b20-8437-48e3-81ce-740f6bc3fe82`START ", 
+                "flags": "i", 
+                "replacement": ""
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`96996935-1cc1-4d12-94b4-886a11aa18cf`START (.*?) `INTENT`96996935-1cc1-4d12-94b4-886a11aa18cf`END", 
+                "flags": "i", 
+                "replacement": "$1"
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`96996935-1cc1-4d12-94b4-886a11aa18cf`START ", 
+                "flags": "i", 
+                "replacement": ""
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`9a9ba876-c5db-4e4b-814a-a8f08e552f2a`START (.*?) `INTENT`9a9ba876-c5db-4e4b-814a-a8f08e552f2a`END", 
+                "flags": "i", 
+                "replacement": "$1"
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`9a9ba876-c5db-4e4b-814a-a8f08e552f2a`START ", 
+                "flags": "i", 
+                "replacement": ""
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`1239b6d8-f21f-4b99-9ae2-b869071757b9`START (.*?) `INTENT`1239b6d8-f21f-4b99-9ae2-b869071757b9`END", 
+                "flags": "i", 
+                "replacement": "$1"
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`1239b6d8-f21f-4b99-9ae2-b869071757b9`START ", 
+                "flags": "i", 
+                "replacement": ""
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`57f8ee51-1e23-4e67-9883-4d96b20f536b`START (.*?) `INTENT`57f8ee51-1e23-4e67-9883-4d96b20f536b`END", 
+                "flags": "i", 
+                "replacement": "$1"
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`57f8ee51-1e23-4e67-9883-4d96b20f536b`START ", 
+                "flags": "i", 
+                "replacement": ""
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`3f4ba493-8249-4fc9-8a45-e17b35d544db`START (.*?) `INTENT`3f4ba493-8249-4fc9-8a45-e17b35d544db`END", 
+                "flags": "i", 
+                "replacement": "$1"
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`3f4ba493-8249-4fc9-8a45-e17b35d544db`START ", 
+                "flags": "i", 
+                "replacement": ""
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`44358217-f4a3-41b2-93ea-972c711b77f9`START (.*?) `INTENT`44358217-f4a3-41b2-93ea-972c711b77f9`END", 
+                "flags": "i", 
+                "replacement": "$1"
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`INTENT`44358217-f4a3-41b2-93ea-972c711b77f9`START ", 
+                "flags": "i", 
+                "replacement": ""
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`ENTITY`d25a6c3e-772a-4364-be1f-1be95274d892`START (.*?) `ENTITY`d25a6c3e-772a-4364-be1f-1be95274d892`END", 
+                "flags": "i", 
+                "replacement": "$1"
+            }
+        }, 
+        {
+            "Regex": {
+                "pattern": "`ENTITY`d25a6c3e-772a-4364-be1f-1be95274d892`START ", 
+                "flags": "i", 
+                "replacement": ""
+            }
+        }
+    ], 
+    "asrEngine": {
+        "version": "0.1.0"
+    }, 
+    "entitiesFstMap": [
+        [
+            79, 
+            "__root__"
+        ], 
+        [
+            81, 
+            "e_0.snips"
+        ]
+    ], 
+    "entityNameToDisambigs": {
+        "visitor": {
+            "start": "`ENTITY`d25a6c3e-772a-4364-be1f-1be95274d892`START", 
+            "end": "`ENTITY`d25a6c3e-772a-4364-be1f-1be95274d892`END", 
+            "empty": [
+                "", 
+                4
+            ]
+        }
+    }, 
+    "inferenceEngine": {
+        "version": 2
+    }
+}
