@@ -36,7 +36,6 @@ sudo docker run -d --name snips-server \
 	-v snips_log:/var/log \
 	-v snips_config:/usr/share/snips \
 	--privileged \
-	-p 1883:1883 \
 	lijah/snips-server
 
 #share config 
