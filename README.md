@@ -28,6 +28,7 @@ sudo docker build -t lijah/snips-server github.com/rmesnard/SnipsServer
 create volume :
 
 sudo docker volume create snips_config
+
 sudo docker volume create snips_log
 
 #run 
